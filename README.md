@@ -35,14 +35,3 @@ $ yarn start
 ## Ou
 
 $ ng serve
-
-$ ng serve
-
-
-## Installing the dependencies
-
-$ yarn 
-
-## Starting application
-
-$ yarn start
