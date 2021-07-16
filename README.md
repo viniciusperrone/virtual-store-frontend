@@ -36,6 +36,8 @@ $ yarn start
 
 $ ng serve
 
+$ ng serve
+
 
 ## Installing the dependencies
 
