@@ -1,0 +1,46 @@
+<div style="display: flex; flex-direction:column;justify-content: space-evenly; align-items: center;">
+  <div style="display: flex; flex-direction:row; justify-content: space-evenly;align-items: center;height: 150px;">
+    <label class="col-sm-2 col-form-label" >Código do Produto</label>
+    <div class="col-sm-10" style="width: 350px; margin-bottom: 20px;">
+      <input type="number" class="form-control" [(ngModel)]="ProductId">
+    </div>
+  </div>
+
+
+  <!-- Button trigger modal -->
+  <button
+    type="button" class="btn btn-primary"
+    data-toggle="modal" data-target="#exampleModal"
+    (click)="addClick()"
+    data-backdrop="static" data-keyboard="false"
+  >
+    Deletar Produto
+  </button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+          <button
+            type="button" class="close"
+            data-dismiss="modal" aria-label="Close"
+            (click)="closeClick()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <app-modal *ngIf="ActivateModal"></app-modal>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="deleteProduct()">Fechar</button>
+          <button type="button" class="btn btn-primary" (click)="closeClick()">Excluir</button>
+        </div>
+    </div>
+  </div>
+
+</div>
